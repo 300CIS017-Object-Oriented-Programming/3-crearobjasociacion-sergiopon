@@ -8,6 +8,7 @@
 #include <iostream>
 #include "Propietario.h"
 #include "Veterinario.h"
+#include "Raza.h"
 
 class Perro {
 private:
@@ -18,6 +19,8 @@ private:
     std::string color;
     Propietario* pPropietario;
     Veterinario* pVeterinario;
+    Raza* pRaza;
+
 
 public:
     Perro();
@@ -29,10 +32,12 @@ public:
     void agregarPropietario(std::string nombre, std::string docIdentidad);
     Veterinario*  getVeterinario();
     void agregarVeterinario(std::string nombre, int aniosExperiencia);
+    void agregarRaza(std::string nombre, std::string paisOrigen);
     // Sirve para relacionar dos clases cuando ya se tiene un objeto
    /* void setPropietario(Propietario * pPropietario);
     void setVeterinario(Veterinario* pVeterinario);
 */
+   Raza* getRazaa();
 
 
     int getEdad();
@@ -45,5 +50,6 @@ public:
     void setTamanio(std::string tamanio);
     std::string getColor();
     void setColor(std::string color);
+    void mostrarInfo();
 };
 #endif

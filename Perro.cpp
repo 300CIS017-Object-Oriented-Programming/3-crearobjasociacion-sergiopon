@@ -31,6 +31,10 @@ void Perro::agregarPropietario(std::string nombre, std::string docIdentidad) {
 void Perro::agregarVeterinario(std::string name, int aniosExperiencia){
     this-> pVeterinario = new Veterinario(name,edad);
 }
+
+void Perro::agregarRaza(std::string nombre, std::string paisOrigen) {
+    this->pRaza= new Raza(nombre,paisOrigen);
+}
 /*
 void Perro::setPropietario(Propietario *pPropietario) {
     this->pPropietario = pPropietario;
@@ -41,9 +45,16 @@ void Perro::setVeterinario(Veterinario *pVeterinario) {
 Propietario *Perro::getPropietario() {
     return this->pPropietario;
 }
+Raza* Perro::getRazaa(){
+    return this->pRaza;
+}
 Veterinario* Perro::getVeterinario(){
     return this->pVeterinario;
 }
+void Perro::mostrarInfo() {
+    std::cout<<"El nombre es "<<this->getNombre()<<" El tamanio es "<<this->getTamanio()<< " el color es " <<this->getColor()<<" el propietario es "<<this->getPropietario()->getNombre()<<" el veterinario es "<<this->getVeterinario()->getNombre()<<" el país de origen es "<<this->getRazaa()->getPaisOrigen()<<" la raza es "<< this->getRazaa()->getNombre()<<std::endl;
+}
+
 
 int Perro::getEdad() {
     return edad;

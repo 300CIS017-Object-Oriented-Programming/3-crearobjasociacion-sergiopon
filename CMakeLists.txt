@@ -11,7 +11,9 @@ set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 file(GLOB SRCS "*.cpp")
 
 # Agregar el ejecutable con los archivos fuente
-add_executable(3_CrearObjAsociacion ${SRCS})
+add_executable(3_CrearObjAsociacion ${SRCS}
+        Raza.cpp
+        Raza.h)
 
 # Incluir los archivos de cabecera
 include_directories(${SRC_DIR})

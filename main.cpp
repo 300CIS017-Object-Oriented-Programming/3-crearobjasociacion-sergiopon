@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Perro.h"
 #include "Propietario.h"
+#include <Raza.h>
 
 int main() {
 
@@ -29,5 +30,18 @@ int main() {
     std::cout<<tobby->getPropietario()->getEdad()<<std::endl;
     tobby->agregarVeterinario("sergiopon",18);
     std::cout<<"El nombre del veterinario es "<<tobby->getVeterinario()->getNombre()<<std::endl;
+
+    Raza* mastinNapolitano= new Raza("Mastín Napolitano","italia");
+    Raza* Maltes= new Raza("Maltes","Italia");
+    firulais.agregarRaza("Mastín Napolitano","Italia");
+    std::cout<<"El nombre es "<<firulais.getNombre();
+    std::cout<<" El tamanio es "<<firulais.getTamanio();
+    std::cout<< " el color es " <<firulais.getColor();
+    std::cout<<" el propietario es "<<firulais.getPropietario()->getNombre();
+   // std::cout<<" el veterinario es "<<firulais.getVeterinario()->getNombre();
+    std::cout<<" el país de origen es ";
+    std::cout<<firulais.getRazaa()->getPaisOrigen()<<" la raza es ";
+    std::cout<< firulais.getRazaa()->getNombre()<<std::endl;
+    //std:: cout <<firulais.getRazaa()->getNombre();
     return 0;
 }
