@@ -27,6 +27,7 @@ int main() {
     tobby->getPropietario()->setEdad(18);
     std::cout<<"El nombre del propietario de "<<tobby->getNombre()<<" es "<< tobby->getPropietario()->getNombre()<<std::endl;
     std::cout<<tobby->getPropietario()->getEdad()<<std::endl;
-
+    tobby->agregarVeterinario("sergiopon",18);
+    std::cout<<"El nombre del veterinario es "<<tobby->getVeterinario()->getNombre()<<std::endl;
     return 0;
 }

@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream>
 #include "Propietario.h"
+#include "Veterinario.h"
 
 class Perro {
 private:
@@ -16,6 +17,7 @@ private:
     std::string tamanio;
     std::string color;
     Propietario* pPropietario;
+    Veterinario* pVeterinario;
 
 public:
     Perro();
@@ -25,9 +27,12 @@ public:
     Perro(std::string nombre, int edad,std::string raza,std:: string color,std::string tamanio);
     // Sirve para asociarle un propietario un objeto
     void agregarPropietario(std::string nombre, std::string docIdentidad);
-
+    Veterinario*  getVeterinario();
+    void agregarVeterinario(std::string nombre, int aniosExperiencia);
     // Sirve para relacionar dos clases cuando ya se tiene un objeto
-    void setPropietario(Propietario * pPropietario);
+   /* void setPropietario(Propietario * pPropietario);
+    void setVeterinario(Veterinario* pVeterinario);
+*/
 
 
     int getEdad();
