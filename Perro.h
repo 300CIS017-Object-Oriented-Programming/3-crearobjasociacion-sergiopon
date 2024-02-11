@@ -22,8 +22,8 @@ public:
     ~Perro(); //Destructor
     void ladrar();
     Propietario * getPropietario();
-
-    // Sirve para.......
+    Perro(std::string nombre, int edad,std::string raza,std:: string color,std::string tamanio);
+    // Sirve para asociarle un propietario un objeto
     void agregarPropietario(std::string nombre, std::string docIdentidad);
 
     // Sirve para relacionar dos clases cuando ya se tiene un objeto

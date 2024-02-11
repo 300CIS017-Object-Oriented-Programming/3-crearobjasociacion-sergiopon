@@ -3,7 +3,7 @@
 
 
 // Ejemplo de constructor por defecto con lista inicializadora
-// Perro::Perro() : edad(0), raza(""), tamanio(""), color("") {}
+//Perro::Perro() : edad(7), raza("schnauzer"), tamanio("mediano"), color("gris") {}
 
 // Ejemplo de constructor por defecto iniciando los atributos en el cuerpo del constructor
 Perro::Perro() {
@@ -12,7 +12,13 @@ Perro::Perro() {
     this->tamanio = "";
     this->color = "";
 }
-
+Perro::Perro(std::string nombre, int edad,std::string raza,std:: string color,std::string tamanio){
+    this->nombre=nombre;
+    this->edad=edad;
+    this->raza=raza;
+    this->color=color;
+    this->tamanio=tamanio;
+}
 void Perro::ladrar() {
     std::cout << "Guau Guau" << std::endl;
 }
